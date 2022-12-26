@@ -1,20 +1,21 @@
-# escalonador-de-urls
+# Escalonador de URLs
 
-## Getting Started
+## Descrição
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Desenvolvimento de um escalonador de URLs, adotando a estratégia depth-first priorizando conjuntos de hosts das URLs encontradas primeiro e ordenando por profundidade das paths.
 
-## Folder Structure
+<br />
 
-The workspace contains two folders by default, where:
+## Estrutura
+O ambiente de trabalho utilizado foi o Visual Studio Code. Os arquivos foram organizados da seguinte forma:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `/src`: pasta destinada aos códigos fontes do projeto.
+- `/.vscode`: pasta destinada a configuração do projeto.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada automaticamente. Caso deseje mudar é possível em `/.vscode/settings.json`.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+<br />
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Grupo
+- Fábio Augusto Araújo Santos
+- Luana Assis Silva
