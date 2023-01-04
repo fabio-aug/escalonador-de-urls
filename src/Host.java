@@ -47,4 +47,5 @@ public class Host {
 
     public void limparUrls() {
     }
+
 }
