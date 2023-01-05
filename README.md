@@ -17,8 +17,7 @@ Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada au
 
 ## Método: descrição das classes e funções; Diagrama de classes
 
-A classe Escritor tem como principal atribuição criar e gerenciar as saídas relativas aos comandos de entrada.
-Através 
+A classe Escritor possui como atributo o nome do arquivo tem como principal atribuição criar e gerenciar as saídas relativas aos comandos de entrada. 
 
 ## Análise de Complexidade:
 
