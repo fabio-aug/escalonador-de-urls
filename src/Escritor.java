@@ -1,23 +1,46 @@
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
+import java.io.BufferedWriter;
 
+/* 
+ * Escritor
+ */
 public class Escritor {
-    private String nomeArquivo;
+    private File arquivo;
 
     public Escritor(String nomeArquivo) {
-        this.nomeArquivo = nomeArquivo+"-out";
+        this.arquivo = new File(criarNomeArquivo(nomeArquivo));
+        criaArquivo();
     }
 
-    public void criaArquivo() throws IOException {
-        File resultado = new File(this.nomeArquivo);
-        resultado.createNewFile();
+    private void criaArquivo() {
+        try {
+            if (!this.arquivo.createNewFile()) {
+                FileWriter fw = new FileWriter(this.arquivo, false);
+                BufferedWriter bw = new BufferedWriter(fw);
+                bw.write("");
+                bw.close();
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
-    public void complementaArquivo(File resultado,String texto) throws IOException {
-        BufferedWriter br = new BufferedWriter(new FileWriter(resultado));
-        br.write(texto + "\n");
-        br.close();
+    private String criarNomeArquivo(String nomeArquivo) {
+        String[] partes = nomeArquivo.split("\\.");
+        String nome = partes[0] + "-out." + partes[1];
+
+        return nome;
+    }
+
+    public void escrever(String texto) {
+        try {
+            FileWriter fw = new FileWriter(this.arquivo, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.append(texto);
+            bw.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }

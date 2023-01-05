@@ -1,15 +1,14 @@
 import java.util.Map;
-import java.util.HashMap;
 import java.util.Scanner;
 import java.io.FileReader;
+import java.util.LinkedHashMap;
 import java.io.FileNotFoundException;
 
 /**
  * Escalonador
  */
 public class Escalonador {
-
-    public static void adicionarUrls(Scanner teclado, HashMap<String, Host> hostList, int quantidade) {
+    public static void adicionarUrls(Scanner teclado, LinkedHashMap<String, Host> hostList, int quantidade) {
         Validador vUrl = new Validador();
 
         for (int i = 0; i < quantidade; i++) {
@@ -35,49 +34,77 @@ public class Escalonador {
         }
     }
 
-    public static void escalonaTudo(HashMap<String, Host> hostList) {
+    public static void escalonaTudo(Escritor escritor, LinkedHashMap<String, Host> hostList) {
         String escrever = "";
 
         for (Map.Entry<String, Host> host : hostList.entrySet()) {
             escrever += host.getValue().escalonaTudo();
         }
 
-        System.out.println("Escalonador.escalonaTudo() - " + escrever);
+        escritor.escrever(escrever);
     }
 
-    public static void escalonaHost(HashMap<String, Host> hostList, String host, int quantidade) {
+    public static void escalonaHost(Escritor escritor, LinkedHashMap<String, Host> hostList, String host, int quantidade) {
         String escrever = "";
 
         if (hostList.containsKey(host)) {
-            escrever = hostList.get(host).escalona(quantidade);
+            escrever += hostList.get(host).escalona(quantidade);
         }
 
-        System.out.println("Escalonador.escalonaHost() - " + escrever);
+        escritor.escrever(escrever);
     }
 
-    public static void verHost(HashMap<String, Host> hostList, String host) {
+    public static void escalona(Escritor escritor, LinkedHashMap<String, Host> hostList, int quantidade) {
+        String escrever = "";
+
+        for (Map.Entry<String, Host> host : hostList.entrySet()) {
+            int hostSize = host.getValue().pegarTamanho();
+            if (hostSize > quantidade) {
+                escrever += host.getValue().escalona(quantidade);
+                break;
+            } else {
+                escrever += host.getValue().escalona(hostSize);
+                quantidade -= hostSize;
+            }
+        }
+
+        escritor.escrever(escrever);
     }
 
-    public static void listaHosts(HashMap<String, Host> hostList) {
+    public static void verHost(Escritor escritor, LinkedHashMap<String, Host> hostList, String host) {
+        String escrever = "";
+
+        if (hostList.containsKey(host)) {
+            escrever = hostList.get(host).verHost();
+        }
+        escritor.escrever(escrever);
     }
 
-    public static void limpaHost(HashMap<String, Host> hostList, String host) {
+    public static void listaHosts(Escritor escritor, LinkedHashMap<String, Host> hostList) {
+        String escrever = "";
+
+        for (Map.Entry<String, Host> host : hostList.entrySet()) {
+            escrever += host.getKey() + "\n";
+        }
+
+        escritor.escrever(escrever);
+    }
+
+    public static void limpaHost(LinkedHashMap<String, Host> hostList, String host) {
         if (hostList.containsKey(host)) {
             hostList.get(host).limparUrls();
         }
     }
 
-    public static void limpaTudo(HashMap<String, Host> hostList) {
-        for (Map.Entry<String, Host> host : hostList.entrySet()) {
-            host.getValue().limparUrls();
-        }
+    public static void limpaTudo(LinkedHashMap<String, Host> hostList) {
+        hostList.clear();
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        HashMap<String, Host> hostList = new HashMap<String, Host>();
+        LinkedHashMap<String, Host> hostList = new LinkedHashMap<String, Host>();
 
         String nomeArquivo = args[0];
-        Escritor teste = new Escritor(nomeArquivo);
+        Escritor escritor = new Escritor(nomeArquivo);
         Scanner teclado = new Scanner(new FileReader(nomeArquivo));
         while (teclado.hasNext()) {
             String entrada = teclado.nextLine();
@@ -87,16 +114,19 @@ public class Escalonador {
                     adicionarUrls(teclado, hostList, Integer.parseInt(e[1]));
                     break;
                 case "ESCALONA_TUDO":
-                    escalonaTudo(hostList);
+                    escalonaTudo(escritor, hostList);
                     break;
                 case "ESCALONA_HOST":
-                    escalonaHost(hostList, e[1], Integer.parseInt(e[2]));
+                    escalonaHost(escritor, hostList, e[1], Integer.parseInt(e[2]));
+                    break;
+                case "ESCALONA":
+                    escalona(escritor, hostList, Integer.parseInt(e[1]));
                     break;
                 case "VER_HOST":
-                    verHost(hostList, e[1]);
+                    verHost(escritor, hostList, e[1]);
                     break;
                 case "LISTA_HOSTS":
-                    listaHosts(hostList);
+                    listaHosts(escritor, hostList);
                     break;
                 case "LIMPA_HOST":
                     limpaHost(hostList, e[1]);

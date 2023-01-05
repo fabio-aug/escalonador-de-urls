@@ -1,9 +1,0 @@
-ADD_URLS 6
-http://ge.globo.com/futebol/futebol-internacional/futebol-espanhol/times/real-madrid/
-http://www.youtube.com/watch?v=lBuF54ZhZFo
-http://www.overleaf.com/project/
-http://www.youtube.com/
-http://www.tudogostoso.com.br/receita/1443-pao-de-queijo.html
-https://ge.globo.com/futebol/futebol-internacional/futebol-espanhol/
-VER_HOST
-ESCALONA_HOST

@@ -7,10 +7,6 @@ public class Validador {
 
         int profundidade = auxString.split("/").length;
 
-        if (profundidade > 0) {
-            profundidade--;
-        }
-
         return profundidade;
     }
 
@@ -51,23 +47,16 @@ public class Validador {
     }
 
     public static boolean urlArquivo(String url) {
-        if (url.contains(".jpg")) {
-            return true;
-        }
-        if (url.contains(".gif")) {
-            return true;
-        }
-        if (url.contains(".mp3")) {
-            return true;
-        }
-        if (url.contains(".avi")) {
-            return true;
-        }
-        if (url.contains(".doc")) {
-            return true;
-        }
-        if (url.contains(".pdf")) {
-            return true;
+        String[] arquivosProibidas = {
+                ".mp3", ".mp4", ".avi",
+                ".png", ".jpg", ".jpeg", ".gif",
+                ".txt", ".doc", ".docx", ".pdf"
+        };
+
+        for (String arquivos : arquivosProibidas) {
+            if (url.contains(arquivos)) {
+                return true;
+            }
         }
 
         return false;
