@@ -77,6 +77,7 @@ public class Escalonador {
         HashMap<String, Host> hostList = new HashMap<String, Host>();
 
         String nomeArquivo = args[0];
+        Escritor teste = new Escritor(nomeArquivo);
         Scanner teclado = new Scanner(new FileReader(nomeArquivo));
         while (teclado.hasNext()) {
             String entrada = teclado.nextLine();
