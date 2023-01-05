@@ -15,21 +15,21 @@ public class Escalonador {
         for (int i = 0; i < quantidade; i++) {
             String url = teclado.nextLine();
 
-            // Valida URL (Protocolo e se é site WEB)
+            // Valida URL (Protocolo e Arquivo)
             if (vUrl.validaUrl(url)) {
 
-                // Pegar o host
+                // Pega o host
                 String host = vUrl.pegarHost(url);
 
-                // Se não existir eu crio o host
+                // Se não existir, cria o host
                 if (!hostList.containsKey(host)) {
                     hostList.put(host, new Host());
                 }
 
-                // Trato a url
+                // Trata a url
                 String urlTratada = vUrl.tratamentoDeUrl(url);
 
-                // Adiciono no host
+                // Adiciona no host
                 hostList.get(host).addUrl(urlTratada);
             }
         }
