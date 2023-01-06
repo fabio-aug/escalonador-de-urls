@@ -1,8 +1,8 @@
 # Escalonador de URLs
 
 ## Grupo:
-- Fábio Augusto Araújo Santos
-- Luana Assis Silva
+- [Fábio Augusto Araújo Santos](https://github.com/fabio-aug)
+- [Luana Assis Silva](https://github.com/luanaassis)
 
 ## Introdução:
 Desenvolvimento de um escalonador de URLs, adotando a estratégia depth-first priorizando conjuntos de hosts das URLs encontradas primeiro e ordenando por profundidade das paths.
