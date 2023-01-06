@@ -45,13 +45,13 @@ Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada au
 
 </br>
 
-- **Host:**
-  - **pegarTamanho:**
-  - **addUrl:**
-  - **escalona:**
-  - **escalonaTudo:**
-  - **verHost:**
-  - **limpaUrls:**
+- **Host:** Esta classe tem como objetivo organizar e manipular os Hosts e as suas respectivas URL's.
+  - **pegarTamanho:** Este método tem como objetivo retornar a quantidade de URL's do mesmo Host.
+  - **addUrl:** Este método tem como objetivo adicionar uma nova URL na lista do seu Host caso a URL ainda não exista na memória.
+  - **escalona:** Este método tem como objetivo escalonar uma quantidade determinada pelo usuário de URL's de um mesmo Host. Além disso, ele retira da lista e retorna as URL's escalonadas.
+  - **escalonaTudo:** Este método tem como objetivo escalonar todas as URL's de um mesmo Host. Além disso, as URL's são retiradas da lista e retornadas.
+  - **verHost:** Este método tem como responsabilidade retornar todas as URL's do Host de forma priorizada. Este método utiliza da manipulação de uma cópia da lista original.
+  - **limpaUrls:** Este método tem como responsabilidade limpar, ou seja, remover todas as URL's do Host. A função é executada através do método clear() da ```PriorityQueue<String>```.
 
 </br>
 
