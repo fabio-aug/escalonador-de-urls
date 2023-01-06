@@ -2,8 +2,8 @@
 
 ## Grupo
 
-- Fábio Augusto Araújo Santos
-- Luana Assis Silva
+- [Fábio Augusto Araújo Santos](https://github.com/fabio-aug)
+- [Luana Assis Silva](https://github.com/luanaassis)
 
 ## Introdução
 
@@ -14,16 +14,18 @@ Desenvolvimento de um escalonador de URLs, adotando a estratégia depth-first pr
 O ambiente de trabalho utilizado foi o Visual Studio Code. Os arquivos foram organizados da seguinte forma:
 
 - `/src`: pasta destinada aos códigos fontes do projeto.
-- `/.vscode`: pasta destinada a configuração do projeto.
+- `/.vscode`: pasta destinada a configuração do projeto caso use a extensão [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+
+Obs: para rodar usando a extensão é necessário algumas alterações no código.
 
 Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada automaticamente. Caso deseje mudar é possível em `/.vscode/settings.json`.
 
 ## Classses e Métodos
 
 <div style="display:flex; justify-content:center; flex-direction:column">
-<strong>Diagrama de classes:</strong>
-</br>
-<img src="./images/diagrama_de_classes.jpg">
+  <strong>Diagrama de classes:</strong>
+  </br>
+  <img src="./images/diagrama_de_classes.jpg">
 </div>
 
 </br>
