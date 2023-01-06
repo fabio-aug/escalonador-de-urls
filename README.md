@@ -29,8 +29,6 @@ Obs: para rodar usando a extensão é necessário algumas alterações no códig
   <strong>Diagrama de classes</strong>
 </p>
 
-</br>
-
 ### Escritor
 
 Classe responsável manipulação do arquivo de saída. Cria, limpa e escreve, a fim de adicionar todos os retornos aos comandos inseridos no arquivo de entrada.
@@ -119,8 +117,8 @@ Com a implementação desta solução, aprendemos sobre novos tipos de estrutura
 
 - Para compilar o projeto, basta inserir a seguinte linha de comando no terminal dentro da pasta `src`:
 
-      `javac .\Escalonador.java`.
+      javac .\Escalonador.java
 
 - Para executar o projeto, é necessário inicialmente um arquivo de texto (.txt) com os comandos e informações que devem ser executados pelo projeto. Este arquivo deve ser incluído na pasta `src`. Após isso, basta inserir a seguinte linha de comando, também dentro da pasta `src`, no terminal para realizar a execução:
 
-      `java .\Escalonador.java <nomeArquivo>.txt`.
+      java .\Escalonador.java <nomeArquivo>.txt
