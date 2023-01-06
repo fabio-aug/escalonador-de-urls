@@ -7,7 +7,7 @@
 
 ## Introdução
 
-Desenvolvimento de um escalonador de URLs, adotando a estratégia depth-first priorizando conjuntos de hosts das URLs encontradas primeiro e ordenando por profundidade das paths.
+Desenvolvimento de um escalonador de URLs, adotando a estratégia `depth-first` priorizando conjuntos de hosts das URLs encontradas primeiro e ordenando por profundidade. Para isso foi usado um `LinkedHashMap<String, Host>` para armazenamento e ordenação por ordem de inserção dos Hosts e em cada Host foi criado uma `PriorityQueue<String>` para armazenamento e organização por profundidade e ordem de inserção das URLs.
 
 ## Estrutura
 
@@ -15,10 +15,9 @@ O ambiente de trabalho utilizado foi o Visual Studio Code. Os arquivos foram org
 
 - `/src`: pasta destinada aos códigos fontes do projeto.
 - `/.vscode`: pasta destinada a configuração do projeto caso use a extensão [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+- `/images`: pasta destinada as imagens do projeto.
 
 Obs: para rodar usando a extensão é necessário algumas alterações no código.
-
-Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada automaticamente. Caso deseje mudar é possível em `/.vscode/settings.json`.
 
 ## Classses e Métodos
 
@@ -32,7 +31,7 @@ Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada au
 
 - **Escritor:** Esta classe é responsável pela criação do arquivo de saída, e da manipulação do mesmo, a fim de adicionar todas os retornos aos comandos inseridos no arquivo de entrada.
   - **criaArquivo:** Este método valida se é possível criar um novo arquivo com o nome padrão, e caso o arquivo já exista, ele retira as informações que já existiam no mesmo.
-  - **criaNomeArquivo:** Este método cria e retorna, a partir de uma manipulação do nome do arquivo de entrada, o nome do novo arquivo de saída, seguindo o padrão "nomedoarquivodeentrada-out.txt".
+  - **criaNomeArquivo:** Este método cria e retorna, a partir de uma manipulação do nome do arquivo de entrada, o nome do novo arquivo de saída, seguindo o padrão "<nome_do_arquivo_de_entrada>-out.txt".
   - **escrever:** Este método é responsável por acrescentar e inserir o retorno das funções ao arquivo de saída.
 
 </br>
@@ -79,4 +78,4 @@ Com a implementação desta solução, aprendemos sobre novos tipos de estrutura
 
 - Para compilar o projeto, basta inserir a seguinte linha de comando no terminal dentro da pasta ```src``` : ```javac .\Escalonador.java```.
 
-- Para executar o projeto, é necessário inicialmente um arquivo de texto (.txt) com os comandos e informações que devem ser executados pelo projeto. Este arquivo deve ser incluído na pasta ```src```. Após isso, basta inserir a seguinte linha de comando, também dentro da pasta ```src```, no terminal para realizar a execução: ```java .\Escalonador.java <nomeArquivo>.txt```.   
+- Para executar o projeto, é necessário inicialmente um arquivo de texto (.txt) com os comandos e informações que devem ser executados pelo projeto. Este arquivo deve ser incluído na pasta ```src```. Após isso, basta inserir a seguinte linha de comando, também dentro da pasta ```src```, no terminal para realizar a execução: ```java .\Escalonador.java <nomeArquivo>.txt```.
