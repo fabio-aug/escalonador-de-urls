@@ -41,8 +41,6 @@ Classe responsável manipulação do arquivo de saída. Cria, limpa e escreve, a
 
 - `escrever` - Este método é responsável por acrescentar e inserir o retorno das funções ao arquivo de saída.
 
-</br>
-
 ### Validador
 
 Classe responsável por realizar as validações e manipulações das URLs inseridas.
@@ -59,8 +57,6 @@ Classe responsável por realizar as validações e manipulações das URLs inser
 
 - `urlArquivo` - Este método avalia se a URL possui algum tipo de arquivo que não é referente à uma página HTML. A validação ocorre através de uma comparação da URL com os tipos de arquivos proibidos contidos em um vetor de Strings. Caso contenha algum dos arquivos proibidos, retorna verdadeiro, caso contrário retorna falso.
 
-</br>
-
 ### Host
 
 Classe responsável por organizar e manipular os Hosts e as suas respectivas URLs.
@@ -76,8 +72,6 @@ Classe responsável por organizar e manipular os Hosts e as suas respectivas URL
 - `verHost` - Este método tem como responsabilidade retornar todas as URLs do Host de forma priorizada. Este método utiliza da manipulação de uma cópia da lista original.
 
 - `limpaUrls` - Este método tem como responsabilidade limpar, ou seja, remover todas as URLs do Host. A função é executada através do método clear() da `PriorityQueue<String>`.
-
-</br>
 
 ### Escalonador
 
@@ -123,6 +117,10 @@ Com a implementação desta solução, aprendemos sobre novos tipos de estrutura
 
 ## 🏃 Instruções para compilação e execução
 
-- Para compilar o projeto, basta inserir a seguinte linha de comando no terminal dentro da pasta `src` : `javac .\Escalonador.java`.
+- Para compilar o projeto, basta inserir a seguinte linha de comando no terminal dentro da pasta `src`:
 
-- Para executar o projeto, é necessário inicialmente um arquivo de texto (.txt) com os comandos e informações que devem ser executados pelo projeto. Este arquivo deve ser incluído na pasta `src`. Após isso, basta inserir a seguinte linha de comando, também dentro da pasta `src`, no terminal para realizar a execução: `java .\Escalonador.java <nomeArquivo>.txt`.
+      `javac .\Escalonador.java`.
+
+- Para executar o projeto, é necessário inicialmente um arquivo de texto (.txt) com os comandos e informações que devem ser executados pelo projeto. Este arquivo deve ser incluído na pasta `src`. Após isso, basta inserir a seguinte linha de comando, também dentro da pasta `src`, no terminal para realizar a execução:
+
+      `java .\Escalonador.java <nomeArquivo>.txt`.
