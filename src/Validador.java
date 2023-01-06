@@ -43,14 +43,14 @@ public class Validador {
      * Por fim retira a "/" barra do final da URL caso exista.
      */
     public String tratamentoDeUrl(String url) {
-        String urlTratata = url.replace("www.", "");
-        urlTratata = urlTratata.split("#")[0];
+        String urlTratada = url.replace("www.", "");
+        urlTratada = urlTratada.split("#")[0];
 
-        if (urlTratata.endsWith("/")) {
-            urlTratata = urlTratata.substring(0, urlTratata.length() - 1);
+        if (urlTratada.endsWith("/")) {
+            urlTratada = urlTratada.substring(0, urlTratada.length() - 1);
         }
 
-        return urlTratata;
+        return urlTratada;
     }
 
     public String pegarHost(String url) {
@@ -79,14 +79,14 @@ public class Validador {
     }
 
     public static boolean urlArquivo(String url) {
-        String[] arquivosProibidas = {
+        String[] arquivosProibidos = {
                 ".mp3", ".mp4", ".avi",
                 ".png", ".jpg", ".jpeg", ".gif",
                 ".txt", ".doc", ".docx", ".pdf"
         };
 
-        for (String arquivos : arquivosProibidas) {
-            if (url.contains(arquivos)) {
+        for (String arquivo : arquivosProibidos) {
+            if (url.contains(arquivo)) {
                 return true;
             }
         }

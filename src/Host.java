@@ -55,7 +55,9 @@ public class Host {
      * Adiciona uma nova URL na lista do host.
      */
     public void addUrl(String url) {
-        this.list.add(url);
+        if (!this.list.contains(url)){
+            this.list.add(url);
+        } 
     }
 
     /*

@@ -4,10 +4,12 @@
 - [Fábio Augusto Araújo Santos](https://github.com/fabio-aug)
 - [Luana Assis Silva](https://github.com/luanaassis)
 
-## Introdução:
+## Introdução
+
 Desenvolvimento de um escalonador de URLs, adotando a estratégia depth-first priorizando conjuntos de hosts das URLs encontradas primeiro e ordenando por profundidade das paths.
 
-## Estrutura:
+## Estrutura
+
 O ambiente de trabalho utilizado foi o Visual Studio Code. Os arquivos foram organizados da seguinte forma:
 
 - `/src`: pasta destinada aos códigos fontes do projeto.
@@ -15,7 +17,8 @@ O ambiente de trabalho utilizado foi o Visual Studio Code. Os arquivos foram org
 
 Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada automaticamente. Caso deseje mudar é possível em `/.vscode/settings.json`.
 
-## Classses e Métodos:
+## Classses e Métodos
+
 <div style="display:flex; justify-content:center; flex-direction:column">
 <strong>Diagrama de classes:</strong>
 </br>
@@ -63,13 +66,14 @@ Por padrão, os arquivos de compilação ficam em `/bin`, pasta que é gerada au
   - **limpaTudo:**
   - **listaHosts:**
 
-## Análise de Complexidade:
+## Análise de Complexidade
 
 ## Conclusão: frase do que foi feito e dizer o que foi aprendido
 
 Com a implementação desta solução, aprendemos sobre novos tipos de estrutura que a linguagem Java nos proporciona como Linked List e LinkedHashMap, e como podemos manipulálas para nos auxiliar em novas aplicações.
 
-## Apêndice Instruções para compilação e execução:
+## Apêndice Instruções para compilação e execução
 
-Para compilar o projeto ...
-Para executar o projeto, ...
+- Para compilar o projeto, basta inserir a seguinte linha de comando no terminal dentro da pasta ```src``` : ```javac .\Escalonador.java```.
+
+- Para executar o projeto, é necessário inicialmente um arquivo de texto (.txt) com os comandos e informações que devem ser executados pelo projeto. Este arquivo deve ser incluído na pasta ```src```. Após isso, basta inserir a seguinte linha de comando, também dentro da pasta ```src```, no terminal para realizar a execução: ```java .\Escalonador.java <nomeArquivo>.txt```.   
