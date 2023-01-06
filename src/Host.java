@@ -4,20 +4,22 @@ import java.util.PriorityQueue;
  * classe Host
  * 
  * Descrição:
- * Classe responsável por organizar e manipular URLs.
+ * Classe responsável por organizar e manipular Hosts e URLs do mesmo.
  */
 public class Host {
     private PriorityQueue<String> list;
 
-    /* 
+    /*
      * Construtor da classe Host()
      * 
      * Descrição:
      * Instância um objeto do tipo validador para pegar profundidade das urls.
-     * Instância a lista da classe como uma PriorityQueue<String> (min-heap) organizando pela profundidade.
-     * Caso a nova URL seja maior ou igual irá retornar +1, assim ocorrendo a troca de posições,
-     *      ordenando por profundidade onde a URL mais funda irá para o final e
-     *      garantindo a ordem de inserção em caso de profundidades equivalentes.
+     * Instância a lista da classe como uma PriorityQueue<String> (min-heap)
+     * organizando pela profundidade.
+     * Caso a nova URL seja maior ou igual irá retornar +1, assim ocorrendo a troca
+     * de posições,
+     * ordenando por profundidade onde a URL mais funda irá para o final e
+     * garantindo a ordem de inserção em caso de profundidades equivalentes.
      */
     public Host() {
         Validador vUrl = new Validador();
@@ -30,7 +32,7 @@ public class Host {
         });
     }
 
-    /* 
+    /*
      * Função pegarTamanho()
      * 
      * Retorno:
@@ -43,7 +45,7 @@ public class Host {
         return this.list.size();
     }
 
-    /* 
+    /*
      * Método addUrl()
      * 
      * Parâmetros:
@@ -67,8 +69,8 @@ public class Host {
      * 
      * Descrição:
      * A partir de uma quantidade informada, a função escalona X URLs do host,
-     *      retira todas da lista e retorna as mesmas.
-    */
+     * retira todas da lista e retorna as mesmas.
+     */
     public String escalona(int quantidade) {
         String retorno = "";
 
@@ -90,7 +92,7 @@ public class Host {
      * 
      * Descrição:
      * Escalona todas as URLs do host, retira todas da lista e retorna as mesmas.
-    */
+     */
     public String escalonaTudo() {
         String retorno = "";
 
@@ -114,7 +116,7 @@ public class Host {
      * Descrição:
      * Pega todas as URLs do host.
      * Uma cópia é feita para não afetar a lista original.
-    */
+     */
     public String verHost() {
         String retorno = "";
 
@@ -135,7 +137,7 @@ public class Host {
      * 
      * Descrição:
      * Usando o método clear() da PriorityQueue<String> limpa a lista.
-    */
+     */
     public void limparUrls() {
         this.list.clear();
     }

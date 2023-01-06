@@ -1,7 +1,25 @@
 /**
- * Validador
+ * classe Validador
+ * 
+ * Descrição:
+ * Classe responsável por validar e manipular URLs.
  */
 public class Validador {
+
+    /*
+     * Função pegarProfundidade()
+     * 
+     * Parâmetros:
+     * String url (URL que deseja calcular a profundidade)
+     * 
+     * Retorno:
+     * Interger (Profundidade da URL)
+     * 
+     * Descrição:
+     * Remove o protocolo na URL. Após remoção do protocolo é dado um split nas "/".
+     * O tamanho do array de retorno indica a quantidade de subpastas, relacionado a
+     * profundidade.
+     */
     public Integer pegarProfundidade(String url) {
         String auxString = url.replace("http://", "");
 
@@ -10,6 +28,20 @@ public class Validador {
         return profundidade;
     }
 
+    /*
+     * Função pegarProfundidade()
+     * 
+     * Parâmetros:
+     * String url (URL que deseja tratar)
+     * 
+     * Retorno:
+     * String (URL tratada)
+     * 
+     * Descrição:
+     * Remove o www. do dominio usando um replace.
+     * Remove qualquer informação de um "#" fragment da URL.
+     * Por fim retira a "/" barra do final da URL caso exista.
+     */
     public String tratamentoDeUrl(String url) {
         String urlTratata = url.replace("www.", "");
         urlTratata = urlTratata.split("#")[0];
