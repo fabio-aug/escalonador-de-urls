@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
  * classe Escalonador
  * 
  * Descrição:
- * Classe responsável por ler o arquivo de entrada e chamas as devidas funções.
+ * Classe responsável por ler o arquivo de entrada e chamar as devidas funções.
  */
 public class Escalonador {
     public static void adicionarUrls(Scanner teclado, LinkedHashMap<String, Host> hostList, int quantidade) {
