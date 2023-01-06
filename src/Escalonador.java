@@ -5,7 +5,10 @@ import java.util.LinkedHashMap;
 import java.io.FileNotFoundException;
 
 /**
- * Escalonador
+ * classe Escalonador
+ * 
+ * Descrição:
+ * Classe responsável por ler o arquivo de entrada e chamas as devidas funções.
  */
 public class Escalonador {
     public static void adicionarUrls(Scanner teclado, LinkedHashMap<String, Host> hostList, int quantidade) {

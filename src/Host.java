@@ -32,47 +32,16 @@ public class Host {
         });
     }
 
-    /*
-     * Função pegarTamanho()
-     * 
-     * Retorno:
-     * Interger (Quantidade de URLs)
-     * 
-     * Descrição:
-     * Retorna a quantidade de URLs do host.
-     */
     public Integer pegarTamanho() {
         return this.list.size();
     }
 
-    /*
-     * Método addUrl()
-     * 
-     * Parâmetros:
-     * String URL (url a ser adicionada)
-     * 
-     * Descrição:
-     * Adiciona uma nova URL na lista do host.
-     */
     public void addUrl(String url) {
         if (!this.list.contains(url)){
             this.list.add(url);
         } 
     }
 
-    /*
-     * Função escalona()
-     * 
-     * Parâmetros:
-     * Int quantidade (quantidade de URLs que devem ser escalonadas)
-     * 
-     * Retorno:
-     * String (URLs escalonadas)
-     * 
-     * Descrição:
-     * A partir de uma quantidade informada, a função escalona X URLs do host,
-     * retira todas da lista e retorna as mesmas.
-     */
     public String escalona(int quantidade) {
         String retorno = "";
 
@@ -86,15 +55,6 @@ public class Host {
         return retorno;
     }
 
-    /*
-     * Função escalonaTudo()
-     * 
-     * Retorno:
-     * String (URLs escalonadas)
-     * 
-     * Descrição:
-     * Escalona todas as URLs do host, retira todas da lista e retorna as mesmas.
-     */
     public String escalonaTudo() {
         String retorno = "";
 
@@ -109,16 +69,6 @@ public class Host {
         return retorno;
     }
 
-    /*
-     * Função verHost()
-     * 
-     * Retorno:
-     * String (URLs escalonadas)
-     * 
-     * Descrição:
-     * Pega todas as URLs do host.
-     * Uma cópia é feita para não afetar a lista original.
-     */
     public String verHost() {
         String retorno = "";
 
@@ -134,12 +84,6 @@ public class Host {
         return retorno;
     }
 
-    /*
-     * Método limparUrls()
-     * 
-     * Descrição:
-     * Usando o método clear() da PriorityQueue<String> limpa a lista.
-     */
     public void limparUrls() {
         this.list.clear();
     }

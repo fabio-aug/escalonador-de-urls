@@ -70,6 +70,20 @@ Obs: para rodar usando a extensão é necessário algumas alterações no códig
 
 ## Análise de Complexidade
 
+- ADD_URLS: O método de adicionar URL's possui a complexidade de O(n) em relação as URL's do Host, devido a ter que percorrer toda a lista para verificar se não é um dado duplicado para no final inserir.
+
+- ESCALONA_TUDO: O método de escalonar todas as URL's possue a complexidade de O(n²), devido a ter que percorrer todos os Host e todas as URL's do mesmo.
+
+- ESCALONA_HOST: O método de escalonar um Host possue a complexidade de O(n), por ser informado o Host que vai ser escalonado acessesamos ele em O(1) no HashMap, sendo necessário percorrer apenas as URL's do mesmo, onde no pior caso pode ser O(n).
+
+- VER_HOST: O método de ver um Host possue a complexidade de O(n), por ser informado o Host que vai ser visto acessesamos ele em O(1) no HashMap, sendo necessário percorrer só tudo só.
+
+- LISTA_HOSTS: O método de listar os Hosts possue a complexidade de O(n), por ser necessário percorrer toda a lista de Host.
+
+- LIMPA_HOST: O método de limpar um Host possue a complexidade de O(n), por ser informado o Host que vai ser limpo acessesamos ele em O(1) no HashMap, sendo necessário percorrer todas as URL's do mesmo para a limpeza.
+
+- LIMPA_TUDO: O método de limpar um Host possue a complexidade de O(n²), por ser necessário percorrer todos os host e em cada host percorrer todas as URL's para a limpeza.
+
 ## Conclusão: frase do que foi feito e dizer o que foi aprendido
 
 Com a implementação desta solução, aprendemos sobre novos tipos de estrutura que a linguagem Java nos proporciona como Linked List e LinkedHashMap, e como podemos manipulálas para nos auxiliar em novas aplicações.

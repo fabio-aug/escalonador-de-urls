@@ -2,8 +2,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 
-/* 
- * Escritor
+/**
+ * classe Escritor
+ * 
+ * Descrição:
+ * Classe responsável por criar, limpar e escrever em arquivos.
  */
 public class Escritor {
     private File arquivo;
