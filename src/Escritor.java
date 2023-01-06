@@ -10,9 +10,11 @@ import java.io.BufferedWriter;
  */
 public class Escritor {
     private File arquivo;
+    private Boolean firstWriter;
 
     public Escritor(String nomeArquivo) {
         this.arquivo = new File(criarNomeArquivo(nomeArquivo));
+        this.firstWriter = true;
         criaArquivo();
     }
 
@@ -40,6 +42,17 @@ public class Escritor {
         try {
             FileWriter fw = new FileWriter(this.arquivo, true);
             BufferedWriter bw = new BufferedWriter(fw);
+
+            if (this.firstWriter) {
+                this.firstWriter = false;
+            } else {
+                texto = "\n" + texto;
+            }
+
+            if (texto.endsWith("\n")) {
+                texto = texto.substring(0, texto.length() - 1);
+            }
+
             bw.append(texto);
             bw.close();
         } catch (Exception e) {
